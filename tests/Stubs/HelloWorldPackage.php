@@ -1,15 +1,17 @@
 <?php
 /**
- * The HelloWorldPackage stub class file.
+ * The HelloWorldPackage class file.
  *
  * @package    Mazepress\Plugin
- * @subpackage Tests
+ * @subpackage Tests\Stubs
  */
 
-namespace Mazepress\Plugin\Tests;
+declare(strict_types=1);
 
-use Mazepress\Plugin\BasePackage;
+namespace Mazepress\Plugin\Tests\Stubs;
+
 use Mazepress\Plugin\PluginInterface;
+use Mazepress\Plugin\BasePackage;
 
 /**
  * The HelloWorldPackage class.
@@ -25,7 +27,7 @@ class HelloWorldPackage extends BasePackage {
 	 * @var string[]
 	 */
 	private $packages = array(
-		'HelloWorldAnother' => 'Mazepress\\Plugin\\Tests\\HelloWorldAnother',
+		'HelloWorldParent' => 'Mazepress\\Plugin\\Tests\\Stubs\\HelloWorldParent',
 	);
 
 	/**

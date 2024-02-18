@@ -3,14 +3,13 @@
  * The HelloWorld stub class file.
  *
  * @package    Mazepress\Plugin
- * @subpackage Tests
+ * @subpackage Tests\Stubs
  */
 
-namespace Mazepress\Plugin\Tests;
+namespace Mazepress\Plugin\Tests\Stubs;
 
 use Mazepress\Plugin\BasePlugin;
 use Mazepress\Plugin\PluginInterface;
-use Mazepress\Plugin\Tests\HelloWorldPackage;
 
 /**
  * The HelloWorld class.

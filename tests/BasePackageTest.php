@@ -12,8 +12,8 @@ namespace Mazepress\Plugin\Tests;
 
 use Mazepress\Plugin\BasePackage;
 use Mazepress\Plugin\PackageInterface;
-use Mazepress\Plugin\Tests\HelloWorld;
-use Mazepress\Plugin\Tests\HelloWorldPackage;
+use Mazepress\Plugin\Tests\Stubs\HelloWorld;
+use Mazepress\Plugin\Tests\Stubs\HelloWorldPackage;
 use WP_Mock\Tools\TestCase;
 use WP_Mock;
 
@@ -49,7 +49,7 @@ class BasePackageTest extends TestCase {
 		$plugin = HelloWorld::instance();
 		$object = new HelloWorldPackage( $plugin );
 		$packs  = array(
-			'HelloWorld' => 'Mazepress\\Plugin\\Tests\\HelloWorld',
+			'HelloWorld' => 'Mazepress\\Plugin\\Tests\\Stubs\\HelloWorld',
 		);
 
 		$this->assertInstanceOf( HelloWorldPackage::class, $object->set_packages( $packs ) );
