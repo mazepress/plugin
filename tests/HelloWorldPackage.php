@@ -1,21 +1,20 @@
 <?php
 /**
- * The Packages class file.
+ * The HelloWorldPackage stub class file.
  *
- * @package Mazepress\Skeleton
+ * @package    Mazepress\Plugin
+ * @subpackage Tests
  */
 
-declare(strict_types=1);
+namespace Mazepress\Plugin\Tests;
 
-namespace Mazepress\Skeleton;
-
-use Mazepress\Core\Struct\PackageInterface;
-use Mazepress\Core\ServiceProvider;
+use Mazepress\Plugin\BasePackage;
+use Mazepress\Plugin\PluginInterface;
 
 /**
- * The Packages class.
+ * The HelloWorldPackage class.
  */
-class Packages extends ServiceProvider {
+class HelloWorldPackage extends BasePackage {
 
 	/**
 	 * Addon packages or plugins.
@@ -26,15 +25,15 @@ class Packages extends ServiceProvider {
 	 * @var string[]
 	 */
 	private $packages = array(
-		'Core' => 'Mazepress\\Core\\App',
+		'HelloWorldAnother' => 'Mazepress\\Plugin\\Tests\\HelloWorldAnother',
 	);
 
 	/**
 	 * Initiate class.
 	 *
-	 * @param PackageInterface $package The package.
+	 * @param PluginInterface $package The package.
 	 */
-	public function __construct( PackageInterface $package ) {
+	public function __construct( PluginInterface $package ) {
 		$this->set_package( $package );
 	}
 
@@ -51,7 +50,7 @@ class Packages extends ServiceProvider {
 			/* translators: 1: The package. 2: Plugin name */
 			esc_html__(
 				'The package %1$s is missing, which is required by the %2$s plugin',
-				'skeleton'
+				'mazepressplugin'
 			),
 			'<code>' . esc_html( $package ) . '</code>',
 			'<code>' . esc_html( $parent ) . '</code>'

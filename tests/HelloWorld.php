@@ -2,19 +2,20 @@
 /**
  * The HelloWorld stub class file.
  *
- * @package    Mazepress\Skeleton
- * @subpackage Tests\Stubs
+ * @package    Mazepress\Plugin
+ * @subpackage Tests
  */
 
-namespace Mazepress\Skeleton\Tests\Stubs;
+namespace Mazepress\Plugin\Tests;
 
-use Mazepress\Core\Plugin;
-use Mazepress\Core\Struct\PackageInterface;
+use Mazepress\Plugin\BasePlugin;
+use Mazepress\Plugin\PluginInterface;
+use Mazepress\Plugin\Tests\HelloWorldPackage;
 
 /**
  * The HelloWorld class.
  */
-final class HelloWorld extends Plugin {
+final class HelloWorld extends BasePlugin {
 
 	/**
 	 * The name.
@@ -61,13 +62,12 @@ final class HelloWorld extends Plugin {
 	/**
 	 * Initialize the package features.
 	 *
-	 * @param PackageInterface $package The package.
+	 * @param PluginInterface $package The package.
 	 *
 	 * @return void
 	 */
-	public static function init( PackageInterface $package = null ): void {
+	public static function init( PluginInterface $package = null ): void {
 
-		// ToDo - Register all classes.
 		// Call sample action.
 		add_action( 'example_action', function () {} );
 	}

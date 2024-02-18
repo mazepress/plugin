@@ -2,7 +2,7 @@
 /**
  * The PhpUnit bootstrap file.
  *
- * @package    Mazepress\Core
+ * @package    Mazepress\Plugin
  * @subpackage Tests
  */
 
