@@ -61,11 +61,11 @@ final class HelloWorldParent extends BasePlugin {
 	/**
 	 * Initialize the package features.
 	 *
-	 * @param PluginInterface $package The package.
+	 * @param PluginInterface|null $package The package.
 	 *
 	 * @return void
 	 */
-	public static function init( PluginInterface $package = null ): void {
+	public static function init( ?PluginInterface $package = null ): void {
 	}
 
 	/**

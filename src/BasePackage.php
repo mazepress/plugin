@@ -67,7 +67,7 @@ abstract class BasePackage implements PackageInterface {
 			// If a package is missing, send an admin notice.
 			if ( ! is_callable( array( $class, 'instance' ) ) ) {
 				// Enque admin message.
-				$this->enque_admin_notice( $name, $package->get_name() );
+				$this->enque_admin_notice( (string) $name, $package->get_name() );
 				continue;
 			}
 

@@ -78,12 +78,12 @@ abstract class BasePlugin implements PluginInterface {
 	 * @phpcs:disable Generic.CodeAnalysis.UnusedFunctionParameter
 	 *
 	 * @param string       $slug The template slug.
-	 * @param string       $name The template name.
+	 * @param string|null  $name The template name.
 	 * @param array<mixed> $args The additional arguments.
 	 *
 	 * @return void
 	 */
-	public function get_template_part( string $slug, string $name = null, array $args = array() ): void {
+	public function get_template_part( string $slug, ?string $name = null, array $args = array() ): void {
 
 		$templates = array();
 
